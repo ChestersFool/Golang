@@ -16,8 +16,8 @@ func main() {
 	}
 	sumSquareX = sumX * sumX
 
-	var a = (N*sumXY - sumX*sumY) / (N*sumXSquare - sumSquareX)
-	var b = (sumY - a*sumX) / N
+	a := (N*sumXY - sumX*sumY) / (N*sumXSquare - sumSquareX)
+	b := (sumY - a*sumX) / N
 	fmt.Printf("a: %v\n", a)
 	fmt.Printf("b: %v\n", b)
 }
