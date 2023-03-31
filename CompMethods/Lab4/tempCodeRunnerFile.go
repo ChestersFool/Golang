@@ -19,7 +19,7 @@ func main() {
 	a := (N*sumXY - sumX*sumY) / (N*sumXSquare - sumSquareX)
 	b := (sumY - a*sumX) / N
 	for i, elem := range y {
-		fmt.Printf("%v %v\n", (i+1) * 1000, elem)
+		fmt.Printf("%v: %v\n", i, elem)
 	}
 	fmt.Printf("a: %v\n", a)
 	fmt.Printf("b: %v\n", b)
