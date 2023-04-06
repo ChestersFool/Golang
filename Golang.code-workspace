@@ -84,8 +84,6 @@
         "rgba(255, 0, 212, 0.08)",
         "rgba(0, 21, 255, 0.08)",
         "rgba(0, 255, 179, 0.08)",
-        // "rgba(43, 255, 0, 0.08)",
-        // "rgba(255, 225, 0, 0.08)",
         "rgba(250, 0, 75, 0.08)"
       ],
       "git.ignoreMissingGitWarning": true,
@@ -102,7 +100,6 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
       },
       "code-runner.executorMap": {
-        //g++ LabGraphics2.cpp -o LabGraphics2 -lgdi32  
         "javascript": "node",
         "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
         "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
@@ -160,11 +157,13 @@
         "pom.xml": "cd $dir && mvn clean package"
       },
       "git.enableSmartCommit": true,
-      "gopls": { "ui.semanticTokens": true,
+      "gopls": { 
+        "ui.semanticTokens": true,
         "formatting.gofumpt": true,
       },
       "[go]": {
         "editor.defaultFormatter": "golang.go",
+        "editor.formatOnSave": true,
         "editor.inlayHints.enabled":"offUnlessPressed",
         "editor.inlayHints.fontSize": 10
         //"editor.suggest.showInlineDetails": true
@@ -177,8 +176,5 @@
       "go.inlayHints.parameterNames": true,
       "go.inlayHints.rangeVariableTypes": true,
     }
-    // "rgba(255,255,64, 0.12)",
-    // "rgba(127,255,127, 0.12)",
-    // "rgba(255,127,255, 0.12)",
-    // "rgba(79,236,236, 0.12)"
+
 }
