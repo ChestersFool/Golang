@@ -24,6 +24,5 @@ func KFTrapeze(a float64, b float64, n int) float64 {
 
 // now  variant 13 // need 16
 func main() {
-	fmt.Println("Hello, World!")
 	fmt.Println(KFTrapeze(0, 10, 100))
 }
