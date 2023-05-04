@@ -32,15 +32,23 @@ func main() {
 	A[N-1][N-1] = 0.5
 	A[N-1][N-2] = 1 - (1/2.0)*h*p_func(float64(b)) // this from (1)
 
+	free[0] = r_func(float64(a))
+
+	x += h
+
 	for i := 1; i < N-1; i++ {
 		A[i][i-1] = 1 - (1/2.0)*h*p_func(x) // (1)
 		A[i][i] = 2 - h*h*q_func(x)
 		A[i][i+1] = 1 + (1/2.0)*h*p_func(x) // (3)
 
-		free[i] = 2.0 / (math.Pow(x + 1, 3))  
+		free[i] = r_func(x)
 
 		x += h
 	}
+
+	free[N-1] = r_func(float64(x))
+	fmt.Printf("x: %v\n", x)
+	
 	for i, row := range A {
 		fmt.Printf("row: %v || free: %v\n", row, free[i])
 	}
