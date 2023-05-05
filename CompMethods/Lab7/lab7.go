@@ -27,11 +27,7 @@ func task(a float64, b float64, N int) []float64 {
 
 	// Перший є і останній from task
 	A[0][0] = 1
-	A[0][1] = 1 + (1/2.0)*h*p_func(a) // this from (3)
-
 	A[N-1][N-1] = 0.5
-	A[N-1][N-2] = 1 - (1/2.0)*h*p_func(b) // this from (1)
-
 	free[0] = r_func(float64(a))
 
 	x += h
@@ -79,7 +75,5 @@ func main() {
 	a, b, N := 0, 1, 10
 
 	fmt.Printf("task(a, b, N): %v\n", task(float64(a), float64(b), N))
-	fmt.Printf("task(a, b, N): %v\n", task(float64(a), float64(b), N * 2))
-
-	// TODO стовпець вільних членівб порахувати СЛАР
+	fmt.Printf("task(a, b, N): %v\n", task(float64(a), float64(b), N*2))
 }
